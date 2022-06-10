@@ -11,7 +11,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class SaveGame {
-    public static String ZIP_FILE = "\\saves.zip";
+    public static String ZIP_FILE = "saves.zip";
     public static void save(GameProgress gameProgress, String path, String saveName) {
         String saveFile = path + "\\" + saveName + ".dat";
         try (FileOutputStream fos = new FileOutputStream(saveFile); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
