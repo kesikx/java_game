@@ -11,6 +11,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class SaveGame {
+    public static String ZIP_FILE = "\\saves.zip";
     public static void save(GameProgress gameProgress, String path, String saveName) {
         String saveFile = path + "\\" + saveName + ".dat";
         try (FileOutputStream fos = new FileOutputStream(saveFile); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -21,7 +22,7 @@ public class SaveGame {
     }
 
     public static void zipFiles(String path, List<String> files) {
-        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(path + "\\saves.zip"))) {
+        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(path + "\\" + ZIP_FILE))) {
             for (String file : files) {
                 try (FileInputStream fis = new FileInputStream(path + "\\" + file)) {
                     ZipEntry entry = new ZipEntry(file);
@@ -32,12 +33,12 @@ public class SaveGame {
                     zos.closeEntry();
                 }
                  catch(Exception e) {
-                    System.out.println(e.getMessage());
+                    e.printStackTrace();
                 }
             }
         }
         catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
         files.forEach(file -> new File(path + "\\" + file).delete());
     }

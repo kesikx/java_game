@@ -44,7 +44,7 @@ public class Installer implements Installable {
             List<DirStructure> dirStructureList = gson.fromJson(gameFileStructure, DirStructureListType);
             createFiles(dirStructureList, gameDirectory, logFile);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 
