@@ -48,8 +48,8 @@ public class Installer implements Installable {
         }
     }
 
-    public Installer(String directory) {
-        this.gameDirectory = directory;
+    public Installer(String gameDirectory) {
+        this.gameDirectory = gameDirectory;
     }
 
     private void createFiles(List<DirStructure> dirStructureList, String parentDir, String logFile) {
