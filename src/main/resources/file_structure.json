@@ -1,0 +1,47 @@
+[
+  {
+    "name": "src",
+    "files": [],
+    "directories": [
+      {
+        "name": "main",
+        "files": [
+          "Main.java",
+          "Utils.java"
+        ],
+        "directories": []
+      },
+      {
+        "name": "test",
+        "files": [],
+        "directories": []
+      }
+    ]
+  },
+  {
+    "name": "savegames",
+    "files": [],
+    "directories": []
+  },
+  {
+    "name": "res",
+    "files": [],
+    "directories": [
+      {
+        "name": "drawables",
+        "files": [],
+        "directories": []
+      },
+      {
+        "name": "vectors",
+        "files": [],
+        "directories": []
+      },
+      {
+        "name": "icons",
+        "files": [],
+        "directories": []
+      }
+    ]
+  }
+]
