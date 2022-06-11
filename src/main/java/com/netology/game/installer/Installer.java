@@ -16,10 +16,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Installer implements Installable {
+public class Installer {
     private final String gameDirectory;
 
-    @Override
     public void install() {
         String logDirName = "temp";
         String logDir = gameDirectory + "\\" + logDirName;
