@@ -1,5 +1,4 @@
 import com.netology.game.gameprogress.GameProgress;
-import com.netology.game.installer.Installable;
 import com.netology.game.installer.Installer;
 import com.netology.game.saves.LoadGame;
 import com.netology.game.saves.SaveGame;
@@ -14,7 +13,7 @@ public class Main {
     public static final String GAME_SAVE = "save1";
 
     public static void main(String[] args) throws IOException {
-        Installable installer = new Installer(INSTALL_DIRECTORY);
+        Installer installer = new Installer(INSTALL_DIRECTORY);
         installer.install();
 
         List<String> saves = new ArrayList<>();
